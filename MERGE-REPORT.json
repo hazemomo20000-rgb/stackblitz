@@ -1,0 +1,33 @@
+{
+  "inputs": [
+    "hazemtechai-main.zip",
+    "hazemtechai_original_files.zip",
+    "Hazemo.zip"
+  ],
+  "source_files": 139,
+  "site_files": 22,
+  "supplemental_assets_copied": [
+    "assets/arrow-right-Bg2Lo7Y5.js",
+    "assets/auth--O0LEn5V.js",
+    "assets/document-reader-EqHNbatE.js",
+    "assets/reset-password-BjYYzYo9.js",
+    "assets/skills-C91Ai-6R.js",
+    "external/google-fonts.css",
+    "external/og-image.png",
+    "favicon.ico"
+  ],
+  "latest_static_build_base": "Hazemo.zip",
+  "environment_file": "Original .env excluded; .env.example added.",
+  "ui_changes_2026_11_20": [
+    "Updated auth route: Google, email/password, signup, password recovery, auth-ready redirect and localized errors.",
+    "Restored DocumentWorkbench on tools route; removed only the voice-reading action while keeping PDF/Office import and PDF export.",
+    "Centered model picker in the main chat header.",
+    "Expanded source/.env.example with all server environment variables found in source code."
+  ],
+  "verification": {
+    "alias_imports_checked": 138,
+    "missing_alias_imports": 0,
+    "build": "not run; dependencies could not be downloaded from npm registry",
+    "live_auth_gemini_tts_upload_and_deployment": "not tested; requires project credentials and deployment"
+  }
+}

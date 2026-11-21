@@ -1,0 +1,65 @@
+HAZEM-TECH AI STUDIO — FINAL REVIEW CHECKLIST
+Updated: 2026-11-20
+
+1) JavaScript / CSS import references
+STATUS: STATIC CHECK PASSED
+- Checked 138 TypeScript/JavaScript alias imports in source/src.
+- No missing @/ alias targets were found.
+- A full Vite build is still required to validate bundler resolution and generated assets.
+
+2) PDF / Word document dependencies
+STATUS: SOURCE DEPENDENCIES PRESENT
+- package.json declares mammoth and pdfjs-dist.
+- Document reader and file attachment source modules are included.
+- Runtime reading of real PDF/DOCX files has not been exercised in this environment.
+
+3) Environment configuration
+STATUS: TEMPLATE COMPLETED
+- .env.example now lists public Supabase values and server-only keys used by the source:
+  SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, SUPABASE_SERVICE_ROLE_KEY,
+  LOVABLE_API_KEY, LOVABLE_CRON_SECRET, optional previous cron secret,
+  and LOVABLE_DB_MIGRATION_URL.
+- Real values must be supplied by the project owner; no secrets are included.
+
+4) Build
+STATUS: NOT RUN
+- Dependencies were not installed because the package registry could not be reached.
+- Run `bun install` then `bun run build` in source/.
+
+5) Login / account creation
+STATUS: CODE UPDATED, LIVE TEST PENDING
+- Login screen supports Google, email/password, sign-up, and password recovery.
+- It waits for the initial auth session check before redirecting.
+- A real login test requires valid Supabase and OAuth configuration.
+
+6) Gemini conversations
+STATUS: LIVE TEST PENDING
+- Requires the user's Gemini API key(s) in app settings.
+- No live API request was made.
+
+7) Speech generation
+STATUS: LIVE TEST PENDING
+- Server speech function remains in the source.
+- Requires LOVABLE_API_KEY and a working server deployment.
+- No audio generation was performed.
+
+8) Upload and read files
+STATUS: SOURCE PATHS PRESENT, RUNTIME TEST PENDING
+- File reading, PDF/Office import, and attachment modules remain.
+- The document workbench remains on the tools page.
+- The separate “قراءة صوتية” button was removed only; document reading/export controls remain.
+
+9) Post-deployment operation
+STATUS: NOT TESTED
+- No deployment was performed.
+- Test on the target host after configuring environment variables and building.
+
+UI changes included:
+- Restored the document workbench section under Tools & Skills.
+- Removed the voice-reading button from that section.
+- Centered the model picker in the main top bar.
+- Updated the login page flow and user-facing error messages.
+
+Important:
+The `site/` folder is the previously extracted static website snapshot. Source-code changes are in `source/`.
+Until `source/` is built successfully, the prebuilt `site/` snapshot will not contain the latest login, tools-page, or model-picker changes.
