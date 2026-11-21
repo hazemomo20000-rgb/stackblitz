@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794369889525,
+      "tag": "0000_studio_profiles_and_private_avatars",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794370085790,
+      "tag": "0001_restrict_profile_trigger_execution",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794803205306,
+      "tag": "0002_account_conversations_and_device_sessions",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1794887631703,
+      "tag": "0003_speech_access_state",
+      "breakpoints": true
+    }
+  ]
+}
